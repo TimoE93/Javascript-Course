@@ -12,6 +12,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./lib/fontawesome.css" />
+    <link rel="stylesheet" href="./lib/solid.css" />
+    <link rel="stylesheet" href="lib/swiper-bundle.min.css" />
   </head>
   <body>
     <header class="main-header">
@@ -27,22 +30,49 @@
     </header>
     <section class="now-playing">
       <h2>Now Playing</h2>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
     </section>
     <section class="search">
       <div class="container">
         <form class="search-form">
-          <div>
-            <input type="radio" id="huey" name="drone" value="huey" checked />
-            <label for="huey">Huey</label>
+          <div class="search-radio">
+            <div>
+              <input
+                type="radio"
+                id="radio-movies"
+                name="movies"
+                value="Movies"
+                checked
+              />
+              <label for="movies">Movies</label>
+            </div>
+            <div>
+              <input type="radio" id="radio-tv" name="tv" value="tv" />
+              <label for="tv">TV Shows</label>
+            </div>
           </div>
-
-          <div>
-            <input type="radio" id="dewey" name="drone" value="dewey" />
-            <label for="dewey">Dewey</label>
+          <div class="search-flex">
+            <input type="text" placeholder="Enter search item" />
+            <button type="submit"><i class="fas fa-search"></i></button>
           </div>
         </form>
       </div>
     </section>
+    <script src="lib/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
