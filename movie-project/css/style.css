@@ -13,6 +13,20 @@ body {
   color: #fff;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.active {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
 .main-header {
   padding: 20px 0;
   background-color: black;
@@ -29,18 +43,21 @@ body {
   font-weight: 700;
 }
 
-.main-header .container {
+.main-header .container,
+.main-footer .container {
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.main-header ul {
+.main-header ul,
+.main-footer ul {
   display: flex;
 }
 
-.main-header ul li {
+.main-header ul li,
+.main-footer ul li {
   list-style-type: none;
   margin-left: 20px;
 }
@@ -123,11 +140,41 @@ body {
   padding: 10px;
 }
 
-a {
-  text-decoration: none;
-  color: #fff;
+.popular-movies {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  margin-top: 60px;
 }
 
-.text-secondary {
-  color: var(--color-secondary);
+.card {
+  background-color: #04376b;
+  padding: 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
+  background: #0a4b8f;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card .card-body {
+  padding: 10px;
+}
+
+.card .title {
+  font-weight: 900;
+}
+
+/* Media Querys */
+
+@media only screen and (max-width: 768px) {
+  .main-header .container {
+    max-width: 100%;
+    margin: 0;
+  }
 }
